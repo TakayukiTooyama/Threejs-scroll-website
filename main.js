@@ -5,6 +5,11 @@ const canvas = document.querySelector("#webgl");
 
 const scene = new THREE.Scene();
 
+// 背景にテクスチャを追加
+const textureLoader = new THREE.TextureLoader();
+const bgTexture = textureLoader.load("./bg/scene-bg.jpg");
+scene.background = bgTexture;
+
 const sizes = {
   width: innerWidth,
   height: innerHeight,
